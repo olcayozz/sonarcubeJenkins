@@ -3,8 +3,7 @@
 
 docker-compose -f /root/repo/EXECUTION_REPO_sonarcubeJenkins/docker-compose.yml down
 [ -d "/root/repo/sonarcubeJenkins/.git" ] && \
-(git --git-dir=/root/repo/sonarcubeJenkins/.git pull && \
-cp -rf /root/repo/sonarcubeJenkins /root/repo/EXECUTION_REPO_sonarcubeJenkins) || \
+(git --git-dir=/root/repo/sonarcubeJenkins/.git pull) || \
 (git clone https://github.com/olcayozz/sonarcubeJenkins /root/repo/sonarcubeJenkins && \
 cp -rf /root/repo/sonarcubeJenkins /root/repo/EXECUTION_REPO_sonarcubeJenkins && \
 rm -rf /root/repo/EXECUTION_REPO_sonarcubeJenkins/.git && \
