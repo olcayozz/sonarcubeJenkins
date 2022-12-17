@@ -5,3 +5,4 @@ java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_ADMIN_USER:$JENKINS_ADM
     echo "java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_ADMIN_USER:$JENKINS_ADMIN_PASS -webSocket install-plugin $plugin -deploy" >> pluginUpdate.sh
 done;
 . ./pluginUpdate.sh
+echo "java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_ADMIN_USER:$JENKINS_ADMIN_PASS -webSocket restart" > restart.sh
