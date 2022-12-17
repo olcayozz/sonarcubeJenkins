@@ -16,4 +16,4 @@ docker exec -it jenkins_olcay sh /app/update_jenkins.sh
 sleep 30
 docker exec -it jenkins_olcay sh /restart.sh
 chmod +x /root/repo/EXECUTION_REPO_sonarcubeJenkins/services/sonarqube/app/bin/*
-docker-compose up -d --build sonarqube
+docker-compose -f /root/repo/EXECUTION_REPO_sonarcubeJenkins/docker-compose.yml up -d --build sonarqube
