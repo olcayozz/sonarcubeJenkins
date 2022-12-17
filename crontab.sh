@@ -4,5 +4,6 @@ docker-compose -f /root/repo/sonarcubeJenkins/docker-compose.yml down
 docker-compose -f /root/repo/sonarcubeJenkins/docker-compose.yml up -d --build jenkins
 sleep 300
 docker exec -it jenkins_olcay sh /app/update_jenkins.sh
+sleep 30
+docker exec -it jenkins_olcay sh java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_ADMIN_USER:$JENKINS_ADMIN_PASS -webSocket restart
 docker-compose up -d --build sonarqube
-
