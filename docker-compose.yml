@@ -6,8 +6,8 @@ services:
     build:
       context: ./services/jenkins
       dockerfile: jenkins.dockerfile
-    container_name: jenkins_olcay
-    hostname: jenkins_olcay
+    container_name: jenkins
+    hostname: jenkins
     user: root
     volumes: 
       - ./services/jenkins/data/jenkins:/var/jenkins_home/
@@ -35,8 +35,8 @@ services:
     build:
       context: ./services/sonarqube
       dockerfile: sonarqube.dockerfile
-    container_name: sonarqube_olcay
-    hostname: sonarqube_olcay
+    container_name: sonarqube
+    hostname: sonarqube
     volumes: 
       #- ./services/sonarqube/app/bin/:/opt/sonarqube/bin/
       - ./services/sonarqube/data/data:/opt/sonarqube/data
