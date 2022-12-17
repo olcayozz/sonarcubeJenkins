@@ -20,7 +20,7 @@ services:
       - JENKINS_ADMIN_USER=jenkins
       - JENKINS_ADMIN_PASS=Yetenek11!
     ports: 
-      - 9090:8080
+      - 80:8080
     networks:
       - frontend
     healthcheck:
@@ -43,7 +43,7 @@ services:
       - ./services/sonarqube/data/extensions:/opt/sonarqube/extensions
       - ./services/sonarqube/data/logs:/opt/sonarqube/logs      
     ports:
-      - "9091:9000"
+      - "9000:9000"
     networks:
       - frontend
     depends_on:
